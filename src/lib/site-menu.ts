@@ -1,0 +1,91 @@
+export type MenuItem = { to: string; label: string };
+export type MenuGroup = { label: string; to?: string; children?: MenuItem[] };
+
+export const siteMenu: MenuGroup[] = [
+  { label: "Home", to: "/" },
+  {
+    label: "About",
+    children: [
+      { to: "/about", label: "About the College" },
+      { to: "/legacy", label: "Legacy" },
+      { to: "/mission-vision", label: "Mission & Vision" },
+      { to: "/motto", label: "College Motto" },
+      { to: "/emblem", label: "College Emblem" },
+      { to: "/anthem", label: "College Anthem" },
+      { to: "/leaders", label: "Our Esteemed Leaders" },
+      { to: "/statutory-body", label: "Statutory Body" },
+      { to: "/principal", label: "Principal" },
+      { to: "/support-staff", label: "Support Staff" },
+      { to: "/teachers", label: "Sanctioned Teachers" },
+      { to: "/cells-clubs", label: "Cells & Clubs" },
+      { to: "/prospectus", label: "Prospectus" },
+      { to: "/fees-waiver", label: "Fees Waiver" },
+    ],
+  },
+  {
+    label: "IQAC",
+    children: [
+      { to: "/iqac", label: "About IQAC" },
+      { to: "/aqar", label: "AQARs" },
+      { to: "/iqac-minutes", label: "Minutes" },
+      { to: "/best-practices", label: "Best Practices" },
+      { to: "/mentor-mentee", label: "Mentor-Mentee" },
+      { to: "/perspective-plan", label: "Perspective Plan" },
+      { to: "/idp", label: "Institutional Development Plan" },
+      { to: "/academic-audit", label: "Academic & Administrative Audit" },
+      { to: "/environment-audit", label: "Environment & Energy Audit" },
+      { to: "/ssr", label: "SSR" },
+      { to: "/nirf", label: "NIRF" },
+      { to: "/aishe", label: "AISHE" },
+    ],
+  },
+  {
+    label: "Academics",
+    children: [
+      { to: "/departments", label: "Departments" },
+      { to: "/courses", label: "Courses" },
+      { to: "/academic-calendar", label: "Academic Calendar" },
+      { to: "/routine", label: "College Routine" },
+      { to: "/annual-report", label: "Annual Report" },
+      { to: "/faculties", label: "Faculty Directory" },
+    ],
+  },
+  {
+    label: "Facilities",
+    children: [
+      { to: "/library", label: "Central Library" },
+      { to: "/computer-lab", label: "Computer Lab" },
+      { to: "/ict-classrooms", label: "ICT Classrooms" },
+      { to: "/career-guidance", label: "Career Guidance & Placement" },
+      { to: "/scouts-guides", label: "Scouts & Guides" },
+      { to: "/solar-plant", label: "Solar Plant" },
+      { to: "/museum", label: "Museum" },
+      { to: "/facilities-pwd", label: "Facilities for PwD" },
+    ],
+  },
+  {
+    label: "Students",
+    children: [
+      { to: "/scholarships", label: "Scholarships" },
+      { to: "/code-of-conduct", label: "Code of Conduct" },
+      { to: "/students-body", label: "Students Body" },
+      { to: "/college-magazine", label: "College Magazine" },
+      { to: "/ncc", label: "NCC" },
+      { to: "/nss", label: "NSS" },
+      { to: "/achievements", label: "Achievements & Awards" },
+    ],
+  },
+  {
+    label: "Alumni",
+    children: [
+      { to: "/alumni-office-bearers", label: "Office Bearers" },
+      { to: "/alumni-achievements", label: "Alumni Achievements" },
+      { to: "/alumni-registration", label: "Registration" },
+    ],
+  },
+  { label: "Gallery", to: "/gallery" },
+  { label: "Achievements", to: "/achievements" },
+  { label: "Admission", to: "/admission" },
+  { label: "Notices", to: "/notices" },
+  { label: "Contact", to: "/contact" },
+];
