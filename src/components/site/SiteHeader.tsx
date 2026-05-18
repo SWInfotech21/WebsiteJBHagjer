@@ -70,7 +70,7 @@ export function SiteHeader() {
                   to={g.to}
                   activeOptions={{ exact: g.to === "/" }}
                   activeProps={{ className: "bg-gold text-gold-foreground" }}
-                  className="px-4 py-3 text-[13px] font-medium uppercase tracking-wider hover:bg-white/10 transition"
+                  className="px-3 py-3 text-[12px] font-medium uppercase tracking-wider hover:bg-white/10 transition"
                 >
                   {g.label}
                 </Link>
@@ -80,7 +80,7 @@ export function SiteHeader() {
               <div key={g.label} className="relative group">
                 <button
                   type="button"
-                  className="flex items-center gap-1 px-4 py-3 text-[13px] font-medium uppercase tracking-wider hover:bg-white/10 transition group-hover:bg-white/10"
+                  className="flex items-center gap-1 px-3 py-3 text-[12px] font-medium uppercase tracking-wider hover:bg-white/10 transition group-hover:bg-white/10"
                 >
                   {g.label}
                   <ChevronDown className="h-3.5 w-3.5" />
