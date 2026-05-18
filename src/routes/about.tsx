@@ -10,11 +10,11 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "Established 1995, J.B. Hagjer Degree College serves Dima Hasao with quality higher education affiliated to Assam University, Silchar." },
       { property: "og:title", content: "About — J.B. Hagjer Degree College, Umrongso" },
       { property: "og:description", content: "Established 1995, J.B. Hagjer Degree College serves Dima Hasao with quality higher education affiliated to Assam University, Silchar." },
-      { property: "og:url", content: "https://digital-campus-forge.lovable.app/about" },
+      { property: "og:url", content: "https://demo.jbhagjerdegreecollege.in/about" },
       { property: "og:type", content: "website" },
     ],
     links: [
-      { rel: "canonical", href: "https://digital-campus-forge.lovable.app/about" },
+      { rel: "canonical", href: "https://demo.jbhagjerdegreecollege.in/about" },
     ],
   }),
   component: AboutPage,

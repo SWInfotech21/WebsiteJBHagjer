@@ -9,11 +9,11 @@ export const Route = createFileRoute("/principal")({
       { name: "description", content: "Message from K Meraton Singha, Principal (i/c) of J.B. Hagjer Degree College, Umrongso." },
       { property: "og:title", content: "Principal's Desk — J.B. Hagjer Degree College" },
       { property: "og:description", content: "Message from K Meraton Singha, Principal (i/c) of J.B. Hagjer Degree College, Umrongso." },
-      { property: "og:url", content: "https://digital-campus-forge.lovable.app/principal" },
+      { property: "og:url", content: "https://demo.jbhagjerdegreecollege.in/principal" },
       { property: "og:type", content: "website" },
     ],
     links: [
-      { rel: "canonical", href: "https://digital-campus-forge.lovable.app/principal" },
+      { rel: "canonical", href: "https://demo.jbhagjerdegreecollege.in/principal" },
     ],
   }),
   component: PrincipalPage,

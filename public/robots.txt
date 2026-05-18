@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://digital-campus-forge.lovable.app/sitemap.xml
+Sitemap: https://demo.jbhagjerdegreecollege.in/sitemap.xml

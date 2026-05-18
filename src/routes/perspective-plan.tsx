@@ -11,11 +11,11 @@ export const Route = createFileRoute("/perspective-plan")({
       { name: "description", content: data.lead.slice(0, 158) },
       { property: "og:title", content: `${data.title} — J.B. Hagjer Degree College` },
       { property: "og:description", content: data.lead.slice(0, 158) },
-      { property: "og:url", content: "https://digital-campus-forge.lovable.app/perspective-plan" },
+      { property: "og:url", content: "https://demo.jbhagjerdegreecollege.in/perspective-plan" },
       { property: "og:type", content: "article" },
     ],
     links: [
-      { rel: "canonical", href: "https://digital-campus-forge.lovable.app/perspective-plan" },
+      { rel: "canonical", href: "https://demo.jbhagjerdegreecollege.in/perspective-plan" },
     ],
   }),
   component: () => <InfoPage slug="perspective-plan" />,

@@ -11,11 +11,11 @@ export const Route = createFileRoute("/alumni-registration")({
       { name: "description", content: data.lead.slice(0, 158) },
       { property: "og:title", content: `${data.title} — J.B. Hagjer Degree College` },
       { property: "og:description", content: data.lead.slice(0, 158) },
-      { property: "og:url", content: "https://digital-campus-forge.lovable.app/alumni-registration" },
+      { property: "og:url", content: "https://demo.jbhagjerdegreecollege.in/alumni-registration" },
       { property: "og:type", content: "article" },
     ],
     links: [
-      { rel: "canonical", href: "https://digital-campus-forge.lovable.app/alumni-registration" },
+      { rel: "canonical", href: "https://demo.jbhagjerdegreecollege.in/alumni-registration" },
     ],
   }),
   component: () => <InfoPage slug="alumni-registration" />,

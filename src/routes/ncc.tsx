@@ -11,11 +11,11 @@ export const Route = createFileRoute("/ncc")({
       { name: "description", content: data.lead.slice(0, 158) },
       { property: "og:title", content: `${data.title} — J.B. Hagjer Degree College` },
       { property: "og:description", content: data.lead.slice(0, 158) },
-      { property: "og:url", content: "https://digital-campus-forge.lovable.app/ncc" },
+      { property: "og:url", content: "https://demo.jbhagjerdegreecollege.in/ncc" },
       { property: "og:type", content: "article" },
     ],
     links: [
-      { rel: "canonical", href: "https://digital-campus-forge.lovable.app/ncc" },
+      { rel: "canonical", href: "https://demo.jbhagjerdegreecollege.in/ncc" },
     ],
   }),
   component: () => <InfoPage slug="ncc" />,

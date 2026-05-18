@@ -11,11 +11,11 @@ export const Route = createFileRoute("/iqac-minutes")({
       { name: "description", content: data.lead.slice(0, 158) },
       { property: "og:title", content: `${data.title} — J.B. Hagjer Degree College` },
       { property: "og:description", content: data.lead.slice(0, 158) },
-      { property: "og:url", content: "https://digital-campus-forge.lovable.app/iqac-minutes" },
+      { property: "og:url", content: "https://demo.jbhagjerdegreecollege.in/iqac-minutes" },
       { property: "og:type", content: "article" },
     ],
     links: [
-      { rel: "canonical", href: "https://digital-campus-forge.lovable.app/iqac-minutes" },
+      { rel: "canonical", href: "https://demo.jbhagjerdegreecollege.in/iqac-minutes" },
     ],
   }),
   component: () => <InfoPage slug="iqac-minutes" />,

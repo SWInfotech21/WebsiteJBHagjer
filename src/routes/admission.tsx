@@ -10,11 +10,11 @@ export const Route = createFileRoute("/admission")({
       { name: "description", content: "Step-by-step guide to UG admission via DHE Unique ID and the Assam SAMARTH Portal for the 2026–27 session." },
       { property: "og:title", content: "Admission 2026–27 — J.B. Hagjer Degree College" },
       { property: "og:description", content: "Step-by-step guide to UG admission via DHE Unique ID and the Assam SAMARTH Portal for the 2026–27 session." },
-      { property: "og:url", content: "https://digital-campus-forge.lovable.app/admission" },
+      { property: "og:url", content: "https://demo.jbhagjerdegreecollege.in/admission" },
       { property: "og:type", content: "website" },
     ],
     links: [
-      { rel: "canonical", href: "https://digital-campus-forge.lovable.app/admission" },
+      { rel: "canonical", href: "https://demo.jbhagjerdegreecollege.in/admission" },
     ],
   }),
   component: AdmissionPage,

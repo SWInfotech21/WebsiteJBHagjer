@@ -11,11 +11,11 @@ export const Route = createFileRoute("/nirf")({
       { name: "description", content: data.lead.slice(0, 158) },
       { property: "og:title", content: `${data.title} — J.B. Hagjer Degree College` },
       { property: "og:description", content: data.lead.slice(0, 158) },
-      { property: "og:url", content: "https://digital-campus-forge.lovable.app/nirf" },
+      { property: "og:url", content: "https://demo.jbhagjerdegreecollege.in/nirf" },
       { property: "og:type", content: "article" },
     ],
     links: [
-      { rel: "canonical", href: "https://digital-campus-forge.lovable.app/nirf" },
+      { rel: "canonical", href: "https://demo.jbhagjerdegreecollege.in/nirf" },
     ],
   }),
   component: () => <InfoPage slug="nirf" />,

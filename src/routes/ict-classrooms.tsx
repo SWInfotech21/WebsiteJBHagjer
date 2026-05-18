@@ -11,11 +11,11 @@ export const Route = createFileRoute("/ict-classrooms")({
       { name: "description", content: data.lead.slice(0, 158) },
       { property: "og:title", content: `${data.title} — J.B. Hagjer Degree College` },
       { property: "og:description", content: data.lead.slice(0, 158) },
-      { property: "og:url", content: "https://digital-campus-forge.lovable.app/ict-classrooms" },
+      { property: "og:url", content: "https://demo.jbhagjerdegreecollege.in/ict-classrooms" },
       { property: "og:type", content: "article" },
     ],
     links: [
-      { rel: "canonical", href: "https://digital-campus-forge.lovable.app/ict-classrooms" },
+      { rel: "canonical", href: "https://demo.jbhagjerdegreecollege.in/ict-classrooms" },
     ],
   }),
   component: () => <InfoPage slug="ict-classrooms" />,

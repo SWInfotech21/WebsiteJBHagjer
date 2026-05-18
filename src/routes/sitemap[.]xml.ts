@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 
-const BASE_URL = "https://digital-campus-forge.lovable.app";
+const BASE_URL = "https://demo.jbhagjerdegreecollege.in";
 
 type Entry = { path: string; priority: string; changefreq: string };
 

@@ -13,10 +13,10 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Get in touch with J.B. Hagjer Degree College, Umrongso, Dima Hasao, Assam — 788931." },
       { property: "og:title", content: "Contact — J.B. Hagjer Degree College" },
       { property: "og:description", content: "Get in touch with J.B. Hagjer Degree College, Umrongso, Dima Hasao, Assam — 788931." },
-      { property: "og:url", content: "https://digital-campus-forge.lovable.app/contact" },
+      { property: "og:url", content: "https://demo.jbhagjerdegreecollege.in/contact" },
       { property: "og:type", content: "website" },
     ],
-    links: [{ rel: "canonical", href: "https://digital-campus-forge.lovable.app/contact" }],
+    links: [{ rel: "canonical", href: "https://demo.jbhagjerdegreecollege.in/contact" }],
   }),
   component: ContactPage,
 });

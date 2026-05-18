@@ -16,11 +16,11 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Premier degree college in Umrongso, Dima Hasao, Assam — affiliated to Assam University Silchar. Admissions 2026–27 open via Samarth Portal." },
       { property: "og:title", content: "J.B. Hagjer Degree College, Umrongso" },
       { property: "og:description", content: "Higher education for the tribal communities of Dima Hasao since 1995." },
-      { property: "og:url", content: "https://digital-campus-forge.lovable.app/" },
+      { property: "og:url", content: "https://demo.jbhagjerdegreecollege.in/" },
       { property: "og:type", content: "website" },
     ],
     links: [
-      { rel: "canonical", href: "https://digital-campus-forge.lovable.app/" },
+      { rel: "canonical", href: "https://demo.jbhagjerdegreecollege.in/" },
       { rel: "preload", as: "image", href: hero, fetchpriority: "high" },
     ],
     scripts: [
@@ -31,7 +31,7 @@ export const Route = createFileRoute("/")({
           "@type": "CollegeOrUniversity",
           name: "J.B. Hagjer Degree College",
           alternateName: "JBHDC Umrongso",
-          url: "https://digital-campus-forge.lovable.app/",
+          url: "https://demo.jbhagjerdegreecollege.in/",
           foundingDate: "1995",
           address: {
             "@type": "PostalAddress",
@@ -50,7 +50,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "J.B. Hagjer Degree College",
-          url: "https://digital-campus-forge.lovable.app/",
+          url: "https://demo.jbhagjerdegreecollege.in/",
         }),
       },
     ],

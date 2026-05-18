@@ -10,11 +10,11 @@ export const Route = createFileRoute("/notices")({
       { name: "description", content: "Latest notices, circulars and announcements from J.B. Hagjer Degree College, Umrongso." },
       { property: "og:title", content: "Notice Board — J.B. Hagjer Degree College" },
       { property: "og:description", content: "Latest notices, circulars and announcements from J.B. Hagjer Degree College, Umrongso." },
-      { property: "og:url", content: "https://digital-campus-forge.lovable.app/notices" },
+      { property: "og:url", content: "https://demo.jbhagjerdegreecollege.in/notices" },
       { property: "og:type", content: "website" },
     ],
     links: [
-      { rel: "canonical", href: "https://digital-campus-forge.lovable.app/notices" },
+      { rel: "canonical", href: "https://demo.jbhagjerdegreecollege.in/notices" },
     ],
   }),
   component: NoticesPage,

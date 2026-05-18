@@ -10,11 +10,11 @@ export const Route = createFileRoute("/faculties")({
       { name: "description", content: "Meet the faculty members and academic departments of J.B. Hagjer Degree College, Umrongso." },
       { property: "og:title", content: "Faculties — J.B. Hagjer Degree College" },
       { property: "og:description", content: "Meet the faculty members and academic departments of J.B. Hagjer Degree College, Umrongso." },
-      { property: "og:url", content: "https://digital-campus-forge.lovable.app/faculties" },
+      { property: "og:url", content: "https://demo.jbhagjerdegreecollege.in/faculties" },
       { property: "og:type", content: "website" },
     ],
     links: [
-      { rel: "canonical", href: "https://digital-campus-forge.lovable.app/faculties" },
+      { rel: "canonical", href: "https://demo.jbhagjerdegreecollege.in/faculties" },
     ],
   }),
   component: FacultiesPage,

@@ -12,11 +12,11 @@ export const Route = createFileRoute("/gallery")({
       { name: "description", content: "Glimpses of campus life, events, celebrations and academic activities at J.B. Hagjer Degree College, Umrongso." },
       { property: "og:title", content: "Photo Gallery — J.B. Hagjer Degree College" },
       { property: "og:description", content: "Glimpses of campus life, events and celebrations at JBHDC, Umrongso." },
-      { property: "og:url", content: "https://digital-campus-forge.lovable.app/gallery" },
+      { property: "og:url", content: "https://demo.jbhagjerdegreecollege.in/gallery" },
       { property: "og:type", content: "website" },
     ],
     links: [
-      { rel: "canonical", href: "https://digital-campus-forge.lovable.app/gallery" },
+      { rel: "canonical", href: "https://demo.jbhagjerdegreecollege.in/gallery" },
     ],
   }),
   component: GalleryPage,
