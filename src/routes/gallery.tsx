@@ -33,6 +33,11 @@ function GalleryPage() {
     description: "J.B. Hagjer Degree College",
   }));
 
+  const handleOpen = (i: number) => {
+    console.log("Opening lightbox at index:", i);
+    setIndex(i);
+  };
+
   return (
     <SiteLayout>
       <PageHeader
@@ -43,9 +48,9 @@ function GalleryPage() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {gallery.map((g, i) => (
             <figure
-              key={g.title}
-              className="bg-card border border-border overflow-hidden group hover:border-gold hover:shadow-lg transition cursor-pointer"
-              onClick={() => setIndex(i)}
+              key={g.title + i}
+              className="bg-card border border-border overflow-hidden group hover:border-gold hover:shadow-lg transition cursor-pointer relative"
+              onClick={() => handleOpen(i)}
             >
               <div className="aspect-[4/3] overflow-hidden bg-secondary relative">
                 <img
@@ -54,11 +59,13 @@ function GalleryPage() {
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <span className="text-white text-sm font-medium bg-black/40 px-3 py-1.5 rounded-full backdrop-blur-sm">View Image</span>
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span className="text-white text-sm font-semibold border-2 border-white px-5 py-2 rounded-md tracking-wider uppercase">
+                    View
+                  </span>
                 </div>
               </div>
-              <figcaption className="px-4 py-3 border-t border-border">
+              <figcaption className="px-4 py-3 border-t border-border bg-white">
                 <div className="font-serif text-base font-semibold text-primary">
                   {g.title}
                 </div>
@@ -68,18 +75,21 @@ function GalleryPage() {
         </div>
       </section>
 
-      <Lightbox
-        index={index}
-        open={index >= 0}
-        close={() => setIndex(-1)}
-        slides={slides}
-        plugins={[Captions]}
-        animation={{ fade: 300, swipe: 500 }}
-        controller={{ closeOnBackdropClick: true }}
-        styles={{
-          container: { backgroundColor: "rgba(0, 0, 0, .9)" },
-        }}
-      />
+      {index >= 0 && (
+        <Lightbox
+          index={index}
+          open={index >= 0}
+          close={() => setIndex(-1)}
+          slides={slides}
+          plugins={[Captions]}
+          animation={{ fade: 300, swipe: 500 }}
+          controller={{ closeOnBackdropClick: true }}
+          styles={{
+            container: { backgroundColor: "rgba(0, 0, 0, 0.95)" },
+            root: { "--yarl__z_index": "9999" } as any,
+          }}
+        />
+      )}
     </SiteLayout>
   );
 }
