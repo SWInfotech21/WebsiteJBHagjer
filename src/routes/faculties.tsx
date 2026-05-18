@@ -36,7 +36,7 @@ function FacultiesPage() {
 
       <section className="container-narrow pb-16">
         <h2 className="font-serif text-2xl font-bold text-primary gold-underline">Faculty Members</h2>
-        <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {faculties.map((f) => (
             <div key={f.name + f.dept} className="bg-card border border-border hover:border-gold hover:shadow-lg transition overflow-hidden">
               <div className="aspect-[3/4] overflow-hidden bg-muted">
