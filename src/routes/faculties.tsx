@@ -38,7 +38,16 @@ function FacultiesPage() {
         <h2 className="font-serif text-2xl font-bold text-primary gold-underline">Faculty Members</h2>
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {faculties.map((f) => (
-            <div key={f.name + f.dept} className="bg-card border border-border hover:border-gold hover:shadow-lg transition">
+            <div key={f.name + f.dept} className="bg-card border border-border hover:border-gold hover:shadow-lg transition overflow-hidden">
+              <div className="aspect-[3/4] overflow-hidden bg-muted">
+                {f.img ? (
+                  <img src={f.img} alt={f.name} className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center bg-primary/5 text-primary/20 font-serif text-6xl uppercase">
+                    {f.name.charAt(0)}
+                  </div>
+                )}
+              </div>
               <div className="bg-primary text-primary-foreground px-5 py-4">
                 <div className="text-xs uppercase tracking-wider text-gold font-semibold">{f.role}</div>
                 <div className="font-serif text-xl font-bold mt-1">{f.name}</div>

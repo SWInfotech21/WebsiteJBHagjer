@@ -1,3 +1,17 @@
+import principalImg from "@/assets/img/principal.jpg";
+import eusufImg from "@/assets/img/Eusuf.png";
+import proponaImg from "@/assets/img/Propona.png";
+import lalnunsiamiImg from "@/assets/img/Lalnunsiami.png";
+import joysingImg from "@/assets/img/Joysing.png";
+import kavitaImg from "@/assets/img/Kavita.png";
+import kimlataImg from "@/assets/img/Kimlata Sengyung.png";
+import muaniImg from "@/assets/img/Lalmuanpuii Nampui.png";
+import soniaImg from "@/assets/img/sonia.png";
+import leslyImg from "@/assets/img/Lesly.png";
+import luciaImg from "@/assets/img/Lucia.png";
+import rajbiniImg from "@/assets/img/Rajbini.png";
+import hituishImg from "@/assets/img/Hituish.png";
+
 export const notices = [
   { date: "6 May 2026", tag: "Admission", title: "Free Registration in Samarth Portal now open", isNew: true },
   { date: "6 May 2026", tag: "Admission", title: "Regarding the opening of Registration in Samarth Portal", isNew: true },
@@ -8,14 +22,19 @@ export const notices = [
 ];
 
 export const faculties = [
-  { name: "K Meraton Singha", role: "Principal (i/c)", dept: "Department of Philosophy", quals: "MA, B.Ed, NET", phone: "+91 78969 83951", email: "kmton11@gmail.com" },
-  { name: "Eusuf Bhuyan", role: "Head of Department", dept: "Department of Education", quals: "MA", phone: "+91 94016 90508", email: "beusuf@gmail.com" },
-  { name: "Propona Naiding", role: "Head of Department", dept: "Department of History", quals: "MA, NET", phone: "+91 88118 59986", email: "proponanaiding@gmail.com" },
-  { name: "Lalnunsiami Ngamlai", role: "Head of Department", dept: "Department of Political Science", quals: "MA", phone: "+91 60002 80736", email: "lalnunsiamin6@gmail.com" },
-  { name: "Faculty Member", role: "Assistant Professor", dept: "Department of Assamese", quals: "MA", phone: "—", email: "—" },
-  { name: "Faculty Member", role: "Assistant Professor", dept: "Department of English", quals: "MA", phone: "—", email: "—" },
-  { name: "Faculty Member", role: "Assistant Professor", dept: "Department of Economics", quals: "MA", phone: "—", email: "—" },
-  { name: "Faculty Member", role: "Librarian", dept: "Central Library", quals: "MLISc", phone: "—", email: "—" },
+  { name: "K Meraton Singha", role: "Principal (i/c)", dept: "Department of Philosophy", quals: "MA, B.Ed, NET", phone: "+91 78969 83951", email: "kmton11@gmail.com", img: principalImg },
+  { name: "Eusuf Bhuyan", role: "Head of Department", dept: "Department of Education", quals: "MA", phone: "+91 94016 90508", email: "beusuf@gmail.com", img: eusufImg },
+  { name: "Propona Naiding", role: "Head of Department", dept: "Department of History", quals: "MA, NET", phone: "+91 88118 59986", email: "proponanaiding@gmail.com", img: proponaImg },
+  { name: "Lalnunsiami Ngamlai", role: "Head of Department", dept: "Department of Political Science", quals: "MA", phone: "+91 60002 80736", email: "lalnunsiamin6@gmail.com", img: lalnunsiamiImg },
+  { name: "Lalmuanpuii Nampui", role: "Assistant Professor", dept: "Department of Education", quals: "MA", phone: "—", email: "—", img: muaniImg },
+  { name: "Joysing Teron", role: "Assistant Professor", dept: "Department of Economics", quals: "MA", phone: "—", email: "—", img: joysingImg },
+  { name: "Kavita Phangchopi", role: "Assistant Professor", dept: "Department of Assamese", quals: "MA", phone: "—", email: "—", img: kavitaImg },
+  { name: "Kimlata Sengyung", role: "Assistant Professor", dept: "Department of English", quals: "MA", phone: "—", email: "—", img: kimlataImg },
+  { name: "Sonia Jidung", role: "Assistant Professor", dept: "Department of Political Science", quals: "MA", phone: "—", email: "—", img: soniaImg },
+  { name: "Lesly Jidung", role: "Assistant Professor", dept: "Department of Political Science", quals: "MA", phone: "—", email: "—", img: leslyImg },
+  { name: "Lucia Thiek", role: "Assistant Professor", dept: "Department of Political Science", quals: "MA", phone: "—", email: "—", img: luciaImg },
+  { name: "Rajbini Hansepi", role: "Assistant Professor", dept: "Department of History", quals: "MA", phone: "—", email: "—", img: rajbiniImg },
+  { name: "Hituish Kemprai", role: "Assistant Professor", dept: "Department of History", quals: "MA", phone: "—", email: "—", img: hituishImg },
 ];
 
 export const departments = [
