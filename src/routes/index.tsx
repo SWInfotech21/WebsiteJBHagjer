@@ -4,6 +4,8 @@ import { ArrowRight, BookOpen, Bell, GraduationCap, Users, Award, Calendar, Chev
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { notices, faculties, programs } from "@/lib/college-data";
 import { gallery, achievements } from "@/lib/gallery-data";
+import "photoswipe/dist/photoswipe.css";
+import { Gallery, Item } from "react-photoswipe-gallery";
 import hero from "@/assets/campus-hero.jpg";
 import library from "@/assets/campus-library.jpg";
 import convocation from "@/assets/campus-convocation.jpg";
@@ -313,15 +315,46 @@ function HomePage() {
               View more <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {gallery.slice(0, 8).map((g) => (
-              <figure key={g.title} className="bg-card border border-border overflow-hidden group hover:border-gold hover:shadow-lg transition">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img src={g.src} alt={g.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                </div>
-                <figcaption className="px-3 py-2.5 border-t border-border text-sm font-semibold text-primary truncate">{g.title}</figcaption>
-              </figure>
-            ))}
+          <div className="mt-10">
+            <Gallery>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                {gallery.slice(0, 8).map((g, i) => (
+                  <Item
+                    key={`${g.title}-${i}`}
+                    original={g.src}
+                    thumbnail={g.src}
+                    width="1200"
+                    height="800"
+                    caption={g.title}
+                  >
+                    {({ ref, open }) => (
+                      <figure
+                        className="bg-card border border-border overflow-hidden group hover:border-gold hover:shadow-lg transition cursor-pointer relative"
+                        onClick={open}
+                      >
+                        <div className="aspect-[4/3] overflow-hidden bg-secondary relative">
+                          <img
+                            ref={ref}
+                            src={g.src}
+                            alt={g.title}
+                            loading="lazy"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                            <span className="text-white text-xs font-semibold border border-white px-3 py-1.5 rounded-sm tracking-wider uppercase">
+                              View
+                            </span>
+                          </div>
+                        </div>
+                        <figcaption className="px-3 py-2.5 border-t border-border text-sm font-semibold text-primary truncate bg-white">
+                          {g.title}
+                        </figcaption>
+                      </figure>
+                    )}
+                  </Item>
+                ))}
+              </div>
+            </Gallery>
           </div>
         </div>
       </section>
