@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHeader } from "@/components/site/SiteLayout";
+import principalImg from "@/assets/img/principal.jpg";
 import { Quote } from "lucide-react";
 
 export const Route = createFileRoute("/principal")({
@@ -25,7 +26,9 @@ function PrincipalPage() {
       <PageHeader title="Principal's Desk" subtitle="A message from the Principal-in-Charge of J.B. Hagjer Degree College." />
       <section className="container-narrow py-14 grid lg:grid-cols-3 gap-10">
         <aside className="lg:col-span-1">
-          <div className="aspect-[4/5] bg-primary/10 border-4 border-gold flex items-center justify-center font-serif text-8xl text-primary/30">KM</div>
+          <div className="aspect-[4/5] bg-primary/10 border-4 border-gold relative overflow-hidden shadow-xl">
+            <img src={principalImg} alt="K Meraton Singha, Principal (i/c)" className="w-full h-full object-cover" />
+          </div>
           <div className="mt-5 bg-secondary p-5 border-l-4 border-gold">
             <div className="font-serif text-2xl font-bold text-primary">K Meraton Singha</div>
             <div className="text-sm text-maroon font-semibold uppercase tracking-wider mt-1">Principal (i/c)</div>

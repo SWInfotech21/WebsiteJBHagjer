@@ -10,6 +10,7 @@ import hero from "@/assets/campus-hero.jpg";
 import library from "@/assets/campus-library.jpg";
 import convocation from "@/assets/campus-convocation.jpg";
 import cultural from "@/assets/campus-cultural.jpg";
+import principalImg from "@/assets/img/principal.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -230,9 +231,8 @@ function HomePage() {
       <section className="bg-secondary py-16">
         <div className="container-narrow grid md:grid-cols-3 gap-10 items-center">
           <div className="md:col-span-1">
-            <div className="aspect-[4/5] bg-primary/10 border-4 border-gold relative overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center font-serif text-8xl text-primary/20">
-              <img src="/src/assets/img/principal.jpg" alt="Principal" className="w-full h-full object-cover" /></div>
+            <div className="aspect-[4/5] bg-primary/10 border-4 border-gold relative overflow-hidden shadow-xl">
+              <img src={principalImg} alt="K Meraton Singha, Principal (i/c)" className="w-full h-full object-cover" />
             </div>
             <div className="mt-4">
               <div className="font-serif text-xl font-bold text-primary">K Meraton Singha</div>
