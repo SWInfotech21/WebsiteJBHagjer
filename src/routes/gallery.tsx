@@ -2,10 +2,7 @@ import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHeader } from "@/components/site/SiteLayout";
 import { gallery } from "@/lib/gallery-data";
-import Lightbox from "yet-another-react-lightbox";
-import Captions from "yet-another-react-lightbox/plugins/captions";
-import "yet-another-react-lightbox/styles.css";
-import "yet-another-react-lightbox/plugins/captions.css";
+import FsLightbox from "fslightbox-react";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -25,17 +22,14 @@ export const Route = createFileRoute("/gallery")({
 });
 
 function GalleryPage() {
-  const [index, setIndex] = useState(-1);
+  const [toggler, setToggler] = useState(false);
+  const [productIndex, setProductIndex] = useState(0);
 
-  const slides = gallery.map((g) => ({
-    src: g.src,
-    title: g.title,
-    description: "J.B. Hagjer Degree College",
-  }));
+  const sources = gallery.map((g) => g.src);
 
-  const handleOpen = (i: number) => {
-    console.log("Opening lightbox at index:", i);
-    setIndex(i);
+  const openLightboxOnIndex = (index: number) => {
+    setProductIndex(index);
+    setToggler(!toggler);
   };
 
   return (
@@ -50,7 +44,7 @@ function GalleryPage() {
             <figure
               key={g.title + i}
               className="bg-card border border-border overflow-hidden group hover:border-gold hover:shadow-lg transition cursor-pointer relative"
-              onClick={() => handleOpen(i)}
+              onClick={() => openLightboxOnIndex(i)}
             >
               <div className="aspect-[4/3] overflow-hidden bg-secondary relative">
                 <img
@@ -66,7 +60,7 @@ function GalleryPage() {
                 </div>
               </div>
               <figcaption className="px-4 py-3 border-t border-border bg-white">
-                <div className="font-serif text-base font-semibold text-primary">
+                <div className="font-serif text-base font-semibold text-primary text-center">
                   {g.title}
                 </div>
               </figcaption>
@@ -75,21 +69,12 @@ function GalleryPage() {
         </div>
       </section>
 
-      {index >= 0 && (
-        <Lightbox
-          index={index}
-          open={index >= 0}
-          close={() => setIndex(-1)}
-          slides={slides}
-          plugins={[Captions]}
-          animation={{ fade: 300, swipe: 500 }}
-          controller={{ closeOnBackdropClick: true }}
-          styles={{
-            container: { backgroundColor: "rgba(0, 0, 0, 0.95)" },
-            root: { "--yarl__z_index": "9999" } as any,
-          }}
-        />
-      )}
+      <FsLightbox
+        toggler={toggler}
+        sources={sources}
+        sourceIndex={productIndex}
+        types={gallery.map(() => "image")}
+      />
     </SiteLayout>
   );
 }
