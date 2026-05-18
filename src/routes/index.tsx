@@ -231,7 +231,7 @@ function HomePage() {
       <section className="bg-secondary py-16">
         <div className="container-narrow grid md:grid-cols-3 gap-10 items-center">
           <div className="md:col-span-1">
-            <div className="aspect-[4/5] bg-primary/10 border-4 border-gold relative overflow-hidden shadow-xl">
+            <div className="aspect-[3/4] bg-primary/10 border-4 border-gold relative overflow-hidden shadow-xl">
               <img src={principalImg} alt="K Meraton Singha, Principal (i/c)" className="w-full h-full object-cover" />
             </div>
             <div className="mt-4">
