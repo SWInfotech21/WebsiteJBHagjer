@@ -294,8 +294,9 @@ function HomePage() {
 
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {faculties.slice(0, 4).map((f) => (
-              <div key={f.name} className="bg-card text-card-foreground p-6 border-t-4 border-gold">
+              
                 <img src={f.img} alt={f.name} className="w-full h-full object-cover" />
+              <div key={f.name} className="bg-card text-card-foreground p-6 border-t-4 border-gold">
                 <div className="font-serif text-lg font-bold text-primary">{f.name}</div>
                 <div className="text-xs uppercase tracking-wider text-maroon mt-1 font-semibold">{f.role}</div>
                 <div className="text-sm text-muted-foreground mt-3">{f.dept}</div>
