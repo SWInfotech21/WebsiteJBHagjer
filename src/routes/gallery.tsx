@@ -1,6 +1,11 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHeader } from "@/components/site/SiteLayout";
 import { gallery } from "@/lib/gallery-data";
+import Lightbox from "yet-another-react-lightbox";
+import Captions from "yet-another-react-lightbox/plugins/captions";
+import "yet-another-react-lightbox/styles.css";
+import "yet-another-react-lightbox/plugins/captions.css";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -20,28 +25,61 @@ export const Route = createFileRoute("/gallery")({
 });
 
 function GalleryPage() {
+  const [index, setIndex] = useState(-1);
+
+  const slides = gallery.map((g) => ({
+    src: g.src,
+    title: g.title,
+    description: "J.B. Hagjer Degree College",
+  }));
+
   return (
     <SiteLayout>
-      <PageHeader title="Photo Gallery" subtitle="Moments from our campus, classrooms, events and celebrations." />
+      <PageHeader
+        title="Photo Gallery"
+        subtitle="Moments from our campus, classrooms, events and celebrations."
+      />
       <section className="container-narrow py-14">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {gallery.map((g) => (
-            <figure key={g.title} className="bg-card border border-border overflow-hidden group hover:border-gold hover:shadow-lg transition">
-              <div className="aspect-[4/3] overflow-hidden bg-secondary">
+          {gallery.map((g, i) => (
+            <figure
+              key={g.title}
+              className="bg-card border border-border overflow-hidden group hover:border-gold hover:shadow-lg transition cursor-pointer"
+              onClick={() => setIndex(i)}
+            >
+              <div className="aspect-[4/3] overflow-hidden bg-secondary relative">
                 <img
                   src={g.src}
                   alt={g.title}
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
+                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span className="text-white text-sm font-medium bg-black/40 px-3 py-1.5 rounded-full backdrop-blur-sm">View Image</span>
+                </div>
               </div>
               <figcaption className="px-4 py-3 border-t border-border">
-                <div className="font-serif text-base font-semibold text-primary">{g.title}</div>
+                <div className="font-serif text-base font-semibold text-primary">
+                  {g.title}
+                </div>
               </figcaption>
             </figure>
           ))}
         </div>
       </section>
+
+      <Lightbox
+        index={index}
+        open={index >= 0}
+        close={() => setIndex(-1)}
+        slides={slides}
+        plugins={[Captions]}
+        animation={{ fade: 300, swipe: 500 }}
+        controller={{ closeOnBackdropClick: true }}
+        styles={{
+          container: { backgroundColor: "rgba(0, 0, 0, .9)" },
+        }}
+      />
     </SiteLayout>
   );
 }
