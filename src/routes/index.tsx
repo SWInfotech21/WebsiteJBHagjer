@@ -414,8 +414,8 @@ function HomePage() {
             <div className="mt-6 bg-card border border-border rounded-sm overflow-hidden flex justify-center">
               <iframe
                 title="JBHDC Facebook page"
-                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FJBHDC1995%2F&tabs=timeline&width=400&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                width={400}
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FJBHDC1995%2F&tabs=timeline&width=350&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                width={350}
                 height={500}
                 style={{ border: "none", overflow: "hidden" }}
                 scrolling="no"
