@@ -411,20 +411,19 @@ function HomePage() {
             <div className="lg:col-span-2">
               <div className="text-xs uppercase tracking-[0.2em] text-maroon mb-2">Stay Connected</div>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary gold-underline">Facebook Updates</h2>
-              <div className="mt-6 bg-card border border-border rounded-sm overflow-hidden min-h-[500px] flex justify-center items-center">
-                <div
-                  className="fb-page"
-                  data-href="https://www.facebook.com/JBHDC1995"
-                  data-tabs="timeline"
-                  data-width="340"
-                  data-height="500"
-                  data-small-header="true"
-                  data-adapt-container-width="true"
-                  data-hide-cover="false"
-                  data-show-facepile="true"
-                >
-                </div>
-                <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v22.0"></script>
+              <div className="mt-6 bg-card border border-border rounded-sm overflow-hidden min-h-[500px] flex justify-center items-center bg-muted/20">
+                <iframe
+                  title="J.B. Hagjer Degree College Facebook Page"
+                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FJBHDC1995&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                  width="340"
+                  height="500"
+                  style={{ border: "none", overflow: "hidden" }}
+                  scrolling="no"
+                  frameBorder="0"
+                  allowFullScreen={true}
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  className="max-w-full"
+                ></iframe>
               </div>
             </div>
           </div>
