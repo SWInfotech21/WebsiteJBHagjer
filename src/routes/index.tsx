@@ -423,6 +423,12 @@ function HomePage() {
                   allowFullScreen={true}
                   allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 ></iframe>
+                <div className="fb-page" 
+                  data-href="https://www.facebook.com/JBHDC1995"
+                  data-width="380" 
+                  data-hide-cover="false"
+                  data-show-facepile="false"
+                ></div>
               </div>
             </div>
           </div>
