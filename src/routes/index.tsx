@@ -412,23 +412,20 @@ function HomePage() {
               <div className="text-xs uppercase tracking-[0.2em] text-maroon mb-2">Stay Connected</div>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary gold-underline">Facebook Updates</h2>
               <div className="mt-6 bg-card border border-border rounded-sm overflow-hidden flex justify-center">
-                <iframe
-                  title="Facebook Page"
-                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FJBHDC1995&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                  width="100%"
-                  height="500"
-                  style={{ border: "none", overflow: "hidden" }}
-                  scrolling="no"
-                  frameBorder="0"
-                  allowFullScreen={true}
-                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                ></iframe>
-                <div className="fb-page" 
-                  data-href="https://www.facebook.com/JBHDC1995"
-                  data-width="380" 
-                  data-hide-cover="false"
-                  data-show-facepile="false"
-                ></div>
+                <div className="facebook-page-wrapper">
+                  <iframe
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FJBHDC1995&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                    width="100%"
+                    height="500"
+                    style={{ border: "none", overflow: "hidden" }}
+                    scrolling="no"
+                    frameBorder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    allowFullScreen={true}
+                    title="Facebook Page Plugin"
+                  ></iframe>
+                </div>
+
               </div>
             </div>
           </div>
