@@ -411,10 +411,10 @@ function HomePage() {
             <div className="lg:col-span-2">
               <div className="text-xs uppercase tracking-[0.2em] text-maroon mb-2">Stay Connected</div>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary gold-underline">Facebook Updates</h2>
-              <div className="mt-6 bg-card border border-border rounded-sm overflow-hidden min-h-[500px] flex justify-center items-center bg-muted/20">
+              <div className="mt-6 bg-card border border-border rounded-sm overflow-hidden min-h-[500px] flex flex-col justify-center items-center bg-muted/20 relative">
                 <iframe
                   title="J.B. Hagjer Degree College Facebook Page"
-                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FJBHDC1995&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FJBHDC1995UMR&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
                   width="340"
                   height="500"
                   style={{ border: "none", overflow: "hidden" }}
@@ -422,8 +422,21 @@ function HomePage() {
                   frameBorder="0"
                   allowFullScreen={true}
                   allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                  className="max-w-full"
+                  className="max-w-full relative z-10"
                 ></iframe>
+                <div className="absolute inset-0 flex items-center justify-center p-6 text-center z-0">
+                  <div className="space-y-3">
+                    <p className="text-sm text-muted-foreground">If the feed doesn't load, you can view our updates directly on Facebook.</p>
+                    <a 
+                      href="https://www.facebook.com/JBHDC1995UMR" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-maroon font-semibold hover:underline"
+                    >
+                      Visit Facebook Page <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
